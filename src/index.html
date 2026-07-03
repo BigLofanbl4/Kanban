@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="board">
+    
+    <div class="board__column" id="todo-column">
+      <h2 class="board__column-title">To-Do</h2>
+      <ul class="board__column-cards">
+        <li class="board__column-card">
+          <input type="text" class="board__column-card-title" value="Помыть посуду">
+          <textarea class="board__column-card-desc">Нужно помыть посуду, иначе мама поругает</textarea>
+        </li>
+      </ul>
+      <button class="board__column-add-btn">Add card</button>
+    </div>
+    
+    <div class="board__column" id="in-progress-column">
+      <h2 class="board__column-title">In progress</h2>
+      <ul class="board__column-cards">
+        <li class="board__column-card">
+          <input type="text" class="board__column-card-title" value="Помыть посуду">
+          <textarea class="board__column-card-desc">Нужно помыть посуду, иначе мама поругает</textarea>
+        </li>
+      </ul>
+      <button class="board__column-add-btn">Add card</button>
+    </div>
+
+    <div class="board__column" id="done-column">
+      <h2 class="board__column-title">Done</h2>
+      <ul class="board__column-cards">
+        <li class="board__column-card">
+          <input type="text" class="board__column-card-title" value="Помыть посуду">
+          <textarea class="board__column-card-desc">Нужно помыть посуду, иначе мама поругает</textarea>
+        </li>
+      </ul>
+      <button class="board__column-add-btn">Add card</button>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

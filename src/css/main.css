@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="text"], textarea {
+  display: block;
+}
+
+input[type="text"]:focus, textarea:focus {
+  outline: none;
+}
+
+.board {  
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.board__column {
+  flex-basis: 300px;
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  border-radius: .7rem;
+  max-width: 500px;
+}
+
+#todo-column {
+  background-color: #bf63f3;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25),
+            0 2px 8px rgba(168, 85, 247, 0.15);
+}
+
+#in-progress-column {
+  background-color: #1868db;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25),
+            0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+#done-column {
+  background-color: #019b5d;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25),
+            0 2px 8px rgba(16, 185, 129, 0.15);
+}
+
+.board__column-title {
+  color: #ffffff;
+  margin-bottom: 1rem;
+} 
+
+.board__column-cards {
+  list-style: none;
+  margin-bottom: .8rem;
+}
+
+.board__column-card { 
+  background-color: #ffffff;
+  padding: .7rem;
+  padding-bottom: 2.5rem;
+  border-radius: .4rem;
+  cursor: grab;
+}
+
+.board__column-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: .7rem;
+  border: none;
+}
+
+.board__column-card:has(.board__column-card-title:focus, .board__column-card-desc:focus) {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.board__column-card-desc {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  color: #828282;
+  resize: none;
+  field-sizing: content;
+}
+
+.board__column-add-btn {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  padding: .3rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: .6rem;
+  transition: all .15s;
+}
+
+.board__column:hover .board__column-add-btn {
+  opacity: 1;
+  visibility: visible;
+}
