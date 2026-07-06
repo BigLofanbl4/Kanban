@@ -16,6 +16,11 @@ export function renderCard(card, columnName) {
   columnElement.append(cardElement);
 }
 
+export function destroyCard(cardId) {
+  const cardElement = document.querySelector(`[data-card-id="${cardId}"]`);
+  cardElement.remove();
+}
+
 function buildCardElement(card) {
   const cardBody = document.createElement("li");
   cardBody.classList.add("board__column-card");

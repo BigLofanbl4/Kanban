@@ -74,3 +74,9 @@ export function updateCard(currentMap, cardId, newTitle, newDesc = "") {
   newMap.set(cardId, { ...targetCard, title: newTitle, desc: newDesc });
   return newMap;
 }
+
+export function deleteCard(currentMap, cardId) {
+  const newMap = new Map(currentMap);
+  newMap.delete(cardId);
+  return newMap;
+}

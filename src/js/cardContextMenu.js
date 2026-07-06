@@ -45,10 +45,10 @@ function closeLastCardContextMenu(cardId) {
 
 function getContextMenuHTML() {
   const menuHtml = `<div class="card-context-menu" data-card-context-menu>
-                      <button class="card-context-menu__copy-btn">
+                      <button class="card-context-menu__copy-btn" data-action="copycard">
                         <i class="fa-solid fa-clone"></i>
                       </button>
-                      <button class="card-context-menu__del-btn">
+                      <button class="card-context-menu__del-btn" data-action="deleteCard">
                         <i class="fa-solid fa-trash"></i>
                       </button>
                     </div>`;
