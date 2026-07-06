@@ -35,6 +35,7 @@ input[type="text"]:focus, textarea:focus {
 .board {  
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
   padding: 1rem;
 }
@@ -47,19 +48,19 @@ input[type="text"]:focus, textarea:focus {
   max-width: 500px;
 }
 
-#todo-column {
+.board__column--purple {
   background-color: #bf63f3;
   box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25),
             0 2px 8px rgba(168, 85, 247, 0.15);
 }
 
-#in-progress-column {
+.board__column--blue {
   background-color: #1868db;
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25),
             0 2px 8px rgba(37, 99, 235, 0.15);
 }
 
-#done-column {
+.board__column--green {
   background-color: #019b5d;
   box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25),
             0 2px 8px rgba(16, 185, 129, 0.15);
@@ -73,6 +74,9 @@ input[type="text"]:focus, textarea:focus {
 .board__column-cards {
   list-style: none;
   margin-bottom: .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .board__column-card { 
@@ -81,6 +85,7 @@ input[type="text"]:focus, textarea:focus {
   padding-bottom: 2.5rem;
   border-radius: .4rem;
   cursor: grab;
+  position: relative;
 }
 
 .board__column-card-title {
@@ -119,4 +124,37 @@ input[type="text"]:focus, textarea:focus {
 .board__column:hover .board__column-add-btn {
   opacity: 1;
   visibility: visible;
+}
+
+.card-context-menu {
+  position: absolute;
+  background-color: #ffffff;
+  top: -4rem;
+  right: 0;
+  padding: .2rem .8rem;
+  border-radius: .4rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08), 
+            0 4px 12px -2px rgba(0, 0, 0, 0.04);
+}
+
+.card-context-menu button {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  padding: .4rem;
+  border-radius: .5rem;
+}
+
+.card-context-menu button:hover {
+  background: #e9e9e9;
+}
+
+.card-context-menu__copy-btn {
+  color: #1868db;
+}
+
+.card-context-menu__del-btn {
+  color: #df5858;
 }
